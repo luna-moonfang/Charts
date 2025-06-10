@@ -76,7 +76,8 @@ open class PieChartData: ChartData
         
         if ignorecase
         {
-            if let label = dataSets[0].label, label.caseInsensitiveCompare(label) == .orderedSame
+            if let dataSetLabel = dataSets[0].label,
+               dataSetLabel.caseInsensitiveCompare(label) == .orderedSame
             {
                 return dataSets[0]
             }
